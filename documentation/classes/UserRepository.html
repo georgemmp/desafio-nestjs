@@ -143,8 +143,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/repositories/UserRepository.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/repositories/UserRepository.ts:45</a></div>
                 </td>
             </tr>
 
@@ -220,15 +220,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>signUp(userData: <a href="../classes/UserDto.html">UserDto</a>)</code>
+                    <code>signUp(userData: <a href="../classes/UserCreateDto.html">UserCreateDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/repositories/UserRepository.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">src/repositories/UserRepository.ts:10</a></div>
                 </td>
             </tr>
 
@@ -250,7 +250,7 @@
                                 <tr>
                                     <td>userData</td>
                                     <td>
-                                                <code><a href="../classes/UserDto.html" target="_self" >UserDto</a></code>
+                                                <code><a href="../classes/UserCreateDto.html" target="_self" >UserCreateDto</a></code>
                                     </td>
 
                                     <td>
@@ -292,15 +292,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validateUserPassword(userData: <a href="../classes/UserDto.html">UserDto</a>)</code>
+                    <code>validateUserPassword(userData: <a href="../classes/AuthDto.html">AuthDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/repositories/UserRepository.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/repositories/UserRepository.ts:34</a></div>
                 </td>
             </tr>
 
@@ -322,7 +322,7 @@
                                 <tr>
                                     <td>userData</td>
                                     <td>
-                                                <code><a href="../classes/UserDto.html" target="_self" >UserDto</a></code>
+                                                <code><a href="../classes/AuthDto.html" target="_self" >AuthDto</a></code>
                                     </td>
 
                                     <td>
@@ -360,13 +360,18 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Repository, EntityRepository } from &quot;typeorm&quot;;
 import { User } from &quot;src/entities/user.entity&quot;;
 import * as bcrypt from &#x27;bcrypt&#x27;;
-import { ConflictException, InternalServerErrorException } from &quot;@nestjs/common&quot;;
-import { UserDto } from &quot;src/dtos/user.dto&quot;;
+import { ConflictException, InternalServerErrorException, BadRequestException } from &quot;@nestjs/common&quot;;
+import { UserCreateDto } from &quot;src/dtos/user-create.dto&quot;;
+import { AuthDto } from &quot;src/dtos/auth.dto&quot;;
 
 @EntityRepository(User)
 export class UserRepository extends Repository&lt;User&gt; {
-    async signUp(userData: UserDto): Promise&lt;void&gt; {
-        const { email, password, username } &#x3D; userData;
+    async signUp(userData: UserCreateDto): Promise&lt;void&gt; {
+        const { email, password, username, passwordConfirmation } &#x3D; userData;
+
+        if (password !&#x3D;&#x3D; passwordConfirmation) {
+            throw new BadRequestException(&#x27;Passwords not matches&#x27;)
+        }
 
         const user &#x3D; new User();
         user.email &#x3D; email;
@@ -385,7 +390,7 @@ export class UserRepository extends Repository&lt;User&gt; {
         }
     }
 
-    async validateUserPassword(userData: UserDto): Promise&lt;string&gt; {
+    async validateUserPassword(userData: AuthDto): Promise&lt;string&gt; {
         const { email, password } &#x3D; userData;
         const user &#x3D; await this.findOne({ email })
 

@@ -27,16 +27,22 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content controller">
+               <div class="content class">
                    <div class="content-data">
 
 
 
 
 
+
+
+
+
+
+
 <ol class="breadcrumb">
-  <li>Controllers</li>
-  <li>AuthController</li>
+  <li>Classes</li>
+  <li>HttpExceptionFilter</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -54,18 +60,17 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/auth/auth.controller.ts</code>
+            <code>src/exceptions/http-exception.filter.ts</code>
         </p>
 
+
+
             <p class="comment">
-                <h3>Prefix</h3>
+                <h3>Implements</h3>
             </p>
             <p class="comment">
-                <code>auth</code>
+                        <code>ExceptionFilter</code>
             </p>
-
-
-
 
 
             <section>
@@ -82,10 +87,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#signIn">signIn</a>
-                            </li>
-                            <li>
-                                <a href="#signUp">signUp</a>
+                                <a href="#catch">catch</a>
                             </li>
                         </ul>
                     </td>
@@ -99,6 +101,8 @@
     </table>
 </section>
 
+
+
             <section>
     
     <h3 id="methods">
@@ -108,33 +112,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="signIn"></a>
+                    <a name="catch"></a>
                     <span class="name">
                         <b>
-                            signIn
+                            catch
                         </b>
-                        <a href="#signIn"><span class="icon ion-ios-link"></span></a>
+                        <a href="#catch"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>signIn(userData: <a href="../classes/AuthDto.html">AuthDto</a>)</code>
+<code>catch(exception: HttpException, host: ArgumentsHost)</code>
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Post(&#x27;/signin&#x27;)<br />@UsePipes(new ValidationPipe())<br /></code>
-                </td>
-            </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/modules/auth/auth.controller.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="5"
+                            class="link-to-prism">src/exceptions/http-exception.filter.ts:5</a></div>
                 </td>
             </tr>
 
@@ -154,9 +151,21 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>userData</td>
+                                    <td>exception</td>
                                     <td>
-                                                <code><a href="../classes/AuthDto.html" target="_self" >AuthDto</a></code>
+                                            <code>HttpException</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>host</td>
+                                    <td>
+                                            <code>ArgumentsHost</code>
                                     </td>
 
                                     <td>
@@ -171,7 +180,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                     <div class="io-description">
@@ -181,120 +190,47 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="signUp"></a>
-                    <span class="name">
-                        <b>
-                            signUp
-                        </b>
-                        <a href="#signUp"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>signUp(userData: <a href="../classes/UserCreateDto.html">UserCreateDto</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Post(&#x27;/signup&#x27;)<br />@UsePipes(new ValidationPipe())<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/modules/auth/auth.controller.ts:15</a></div>
-                </td>
-            </tr>
+</section>
 
 
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>userData</td>
-                                    <td>
-                                                <code><a href="../classes/UserCreateDto.html" target="_self" >UserCreateDto</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
 
 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
 
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>    </div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Post, Body, UsePipes } from &#x27;@nestjs/common&#x27;;
-import { AuthService } from &#x27;./auth.service&#x27;;
-import { ValidationPipe } from &#x27;src/pipes/validation.pipes&#x27;;
-import { UserCreateDto } from &#x27;src/dtos/user-create.dto&#x27;;
-import { AuthDto } from &#x27;src/dtos/auth.dto&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExceptionFilter, HttpException, ArgumentsHost, Logger, Catch } from &quot;@nestjs/common&quot;;
 
-@Controller(&#x27;auth&#x27;)
-export class AuthController {
-    constructor(
-        private authService: AuthService,
-    ) {}
+@Catch()
+export class HttpExceptionFilter implements ExceptionFilter {
+    catch(exception: HttpException, host: ArgumentsHost) {
+        const ctx &#x3D; host.switchToHttp();
+        const request &#x3D; ctx.getRequest();
+        const response &#x3D; ctx.getResponse();
+        const status &#x3D; exception.getStatus();
 
-    @Post(&#x27;/signup&#x27;)
-    @UsePipes(new ValidationPipe())
-    signUp(@Body() userData: UserCreateDto): Promise&lt;void&gt; {
-        return this.authService.signUp(userData);
+        const error &#x3D; exception.getResponse()[&#x27;error&#x27;];
+
+        const errorResponse &#x3D; {
+            code: status,
+            timestamp: new Date().toLocaleDateString(),
+            path: request.url,
+            method: request.method,
+            message: error || exception.message || null,
+        }
+
+        Logger.error(
+            &#x60;${request.method} ${request.url}&#x60;,
+            JSON.stringify(errorResponse),
+            &#x27;ExceptionFilter&#x27;,
+        )
+
+        response.status(status).json(errorResponse);
     }
-
-    @Post(&#x27;/signin&#x27;)
-    @UsePipes(new ValidationPipe())
-    signIn(@Body() userData: AuthDto): Promise&lt;{ accessToken: string }&gt; {
-        return this.authService.signIn(userData);
-    }
-}
-</code></pre>
+}</code></pre>
     </div>
 </div>
-
-
-
-
-
-
 
 
 
@@ -319,8 +255,8 @@ export class AuthController {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthController.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'HttpExceptionFilter.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

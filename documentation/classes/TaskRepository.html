@@ -27,7 +27,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content injectable">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -36,9 +36,13 @@
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Injectables</li>
-  <li>TasksService</li>
+  <li>Classes</li>
+  <li>TaskRepository</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,9 +60,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/modules/tasks/tasks.service.ts</code>
+            <code>src/repositories/TaskRepository.ts</code>
         </p>
 
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>Repository</code>
+            </p>
 
 
 
@@ -77,6 +88,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#createTask">createTask</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#destroy">destroy</a>
                             </li>
                             <li>
@@ -85,15 +100,11 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#getOne">getOne</a>
+                                <a href="#getById">getById</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#save">save</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#update">update</a>
+                                <a href="#updateTask">updateTask</a>
                             </li>
                         </ul>
                     </td>
@@ -107,60 +118,97 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(taskRepository: <a href="../classes/TaskRepository.html">TaskRepository</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/modules/tasks/tasks.service.ts:10</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>taskRepository</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../classes/TaskRepository.html" target="_self" >TaskRepository</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
             <section>
     
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTask"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createTask
+                        </b>
+                        <a href="#createTask"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTask(taskDto: <a href="../classes/TaskCreateDto.html">TaskCreateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/repositories/TaskRepository.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>taskDto</td>
+                                    <td>
+                                                <code><a href="../classes/TaskCreateDto.html" target="_self" >TaskCreateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -185,8 +233,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/modules/tasks/tasks.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/repositories/TaskRepository.ts:52</a></div>
                 </td>
             </tr>
 
@@ -269,8 +317,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/modules/tasks/tasks.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">src/repositories/TaskRepository.ts:10</a></div>
                 </td>
             </tr>
 
@@ -321,28 +369,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getOne"></a>
+                    <a name="getById"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            getOne
+                            getById
                         </b>
-                        <a href="#getOne"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getById"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getOne(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, user: <a href="../classes/User.html">User</a>)</code>
+                    <code>getById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, user: <a href="../classes/User.html">User</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/modules/tasks/tasks.service.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/repositories/TaskRepository.ts:29</a></div>
                 </td>
             </tr>
 
@@ -405,112 +453,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="save"></a>
+                    <a name="updateTask"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            save
+                            updateTask
                         </b>
-                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                        <a href="#updateTask"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>save(taskData: <a href="../classes/TaskCreateDto.html">TaskCreateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
+                    <code>updateTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, taskData: <a href="../classes/TaskUpdateDto.html">TaskUpdateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/modules/tasks/tasks.service.ts:20</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>taskData</td>
-                                    <td>
-                                                <code><a href="../classes/TaskCreateDto.html" target="_self" >TaskCreateDto</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>user</td>
-                                    <td>
-                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="update"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            update
-                        </b>
-                        <a href="#update"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, taskData: <a href="../classes/TaskUpdateDto.html">TaskUpdateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/modules/tasks/tasks.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/repositories/TaskRepository.ts:39</a></div>
                 </td>
             </tr>
 
@@ -583,53 +547,75 @@
     </table>
 </section>
 
+
+
+
+
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { InjectRepository } from &#x27;@nestjs/typeorm&#x27;;
-import { TaskRepository } from &#x27;src/repositories/TaskRepository&#x27;;
-import { User } from &#x27;src/entities/user.entity&#x27;;
-import { Task } from &#x27;src/entities/task.entity&#x27;;
-import { TaskCreateDto } from &#x27;src/dtos/task-create.dto&#x27;;
-import { TaskUpdateDto } from &#x27;src/dtos/task-update&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EntityRepository, Repository } from &quot;typeorm&quot;;
+import { Task } from &quot;src/entities/task.entity&quot;;
+import { TaskCreateDto } from &quot;src/dtos/task-create.dto&quot;;
+import { User } from &quot;src/entities/user.entity&quot;;
+import { NotFoundException } from &quot;@nestjs/common&quot;;
+import { TaskUpdateDto } from &quot;src/dtos/task-update&quot;;
 
-@Injectable()
-export class TasksService {
-    constructor(
-        @InjectRepository(TaskRepository)
-        private taskRepository: TaskRepository,
-    ) {}
-
+@EntityRepository(Task)
+export class TaskRepository extends Repository&lt;Task&gt; {
     async getAll(user: User): Promise&lt;Task[]&gt; {
-        return await this.taskRepository.getAll(user);
+        return await Task.find({ user });
     }
 
-    async save(taskData: TaskCreateDto, user: User): Promise&lt;Task&gt; {
-        return await this.taskRepository.createTask(taskData, user);
+    async createTask(taskDto: TaskCreateDto, user: User): Promise&lt;Task&gt; {
+        const { title, description } &#x3D; taskDto;
+
+        const task &#x3D; new Task();
+        task.title &#x3D; title;
+        task.description &#x3D; description;
+        task.user &#x3D; user;
+
+        await task.save();
+
+        delete task.user;
+
+        return task;
     }
 
-    async getOne(id: number, user: User): Promise&lt;Task&gt; {
-        return await this.taskRepository.getById(id, user);
+    async getById(id: number, user: User): Promise&lt;Task&gt; {
+        const task &#x3D; await Task.findOne({ where: {id, user} });
+
+        if (!task) {
+            throw new NotFoundException(&#x27;Task not found&#x27;);
+        }
+
+        return task;
     }
 
-    async update(id: number, taskData: TaskUpdateDto, user: User): Promise&lt;Task&gt; {
-        return await this.taskRepository.updateTask(id, taskData, user);
+    async updateTask(id: number, taskData: TaskUpdateDto, user: User): Promise&lt;Task&gt; {
+        const { description, title } &#x3D; taskData;
+
+        const task &#x3D; await this.getById(id, user);
+
+        task.description &#x3D; description ? description : task.description;
+        task.title &#x3D; title ? title : task.title;
+        
+        await task.save();
+        
+        return task;
     }
 
     async destroy(id: number, user: User): Promise&lt;void&gt; {
-        return await this.taskRepository.destroy(id, user);
+        const result &#x3D; await Task.delete({id, user});
+
+        if (result.affected &#x3D;&#x3D;&#x3D; 0) {
+            throw new NotFoundException(&#x27;Task not found&#x27;);
+        }
     }
-}
-</code></pre>
+}</code></pre>
     </div>
-
 </div>
-
-
-
-
 
 
 
@@ -654,8 +640,8 @@ export class TasksService {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'TasksService.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'TaskRepository.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -82,7 +82,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#destroy">destroy</a>
+                            </li>
+                            <li>
                                 <a href="#getAll">getAll</a>
+                            </li>
+                            <li>
+                                <a href="#getOne">getOne</a>
+                            </li>
+                            <li>
+                                <a href="#save">save</a>
+                            </li>
+                            <li>
+                                <a href="#update">update</a>
                             </li>
                         </ul>
                     </td>
@@ -105,6 +117,95 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="destroy"></a>
+                    <span class="name">
+                        <b>
+                            destroy
+                        </b>
+                        <a href="#destroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>destroy(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getAll"></a>
                     <span class="name">
                         <b>
@@ -116,7 +217,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getAll()</code>
+<code>getAll(user: <a href="../classes/User.html">User</a>)</code>
                 </td>
             </tr>
 
@@ -130,8 +231,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:17</a></div>
                 </td>
             </tr>
 
@@ -140,8 +241,318 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOne"></a>
+                    <span class="name">
+                        <b>
+                            getOne
+                        </b>
+                        <a href="#getOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOne(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <b>
+                            save
+                        </b>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>save(taskData: <a href="../classes/TaskCreateDto.html">TaskCreateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>taskData</td>
+                                    <td>
+                                                <code><a href="../classes/TaskCreateDto.html" target="_self" >TaskCreateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, taskData: <a href="../classes/TaskUpdateDto.html">TaskUpdateDto</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/modules/tasks/tasks.controller.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>taskData</td>
+                                    <td>
+                                                <code><a href="../classes/TaskUpdateDto.html" target="_self" >TaskUpdateDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Task.html" target="_self" >Promise&lt;Task&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -151,16 +562,44 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, UseGuards, Post, Body, Param, Put, ParseIntPipe, Delete } from &#x27;@nestjs/common&#x27;;
 import { TasksService } from &#x27;./tasks.service&#x27;;
+import { GetUser } from &#x27;src/decorators/get-user.decorator&#x27;;
+import { User } from &#x27;src/entities/user.entity&#x27;;
+import { AuthGuard } from &#x27;@nestjs/passport&#x27;;
+import { Task } from &#x27;src/entities/task.entity&#x27;;
+import { TaskCreateDto } from &#x27;src/dtos/task-create.dto&#x27;;
+import { ValidationPipe } from &#x27;src/pipes/validation.pipes&#x27;;
+import { TaskUpdateDto } from &#x27;src/dtos/task-update&#x27;;
 
+@UseGuards(AuthGuard())
 @Controller(&#x27;tasks&#x27;)
 export class TasksController {
     constructor(private taskService: TasksService) {}
 
     @Get()
-    getAll() {
-        return &#x27;tasks&#x27;;
+    getAll(@GetUser() user: User): Promise&lt;Task[]&gt; {
+        return this.taskService.getAll(user);
+    }
+
+    @Get(&#x27;:id&#x27;)
+    getOne(@Param(&#x27;id&#x27;, ParseIntPipe) id: number, @GetUser() user: User): Promise&lt;Task&gt; {
+        return this.taskService.getOne(id, user);
+    }
+
+    @Post()
+    save(@Body(new ValidationPipe()) taskData: TaskCreateDto, @GetUser() user: User): Promise&lt;Task&gt; {
+        return this.taskService.save(taskData, user);
+    }
+
+    @Put(&#x27;:id&#x27;)
+    update(@Param(&#x27;id&#x27;, ParseIntPipe) id: number, @Body(new ValidationPipe()) taskData: TaskUpdateDto, @GetUser() user: User): Promise&lt;Task&gt; {
+        return this.taskService.update(id, taskData, user);
+    }
+
+    @Delete(&#x27;:id&#x27;)
+    destroy(@Param(&#x27;id&#x27;, ParseIntPipe) id: number, @GetUser() user: User): Promise&lt;void&gt; {
+        return this.taskService.destroy(id, user);
     }
 }
 </code></pre>

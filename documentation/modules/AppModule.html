@@ -162,13 +162,30 @@ import { AuthModule } from &#x27;./modules/auth/auth.module&#x27;;
 import { TasksModule } from &#x27;./modules/tasks/tasks.module&#x27;;
 import { TypeOrmModule } from &#x27;@nestjs/typeorm&#x27;;
 import { typeOrmConfig } from &#x27;./config/typeorm.config&#x27;;
+import { APP_FILTER, APP_INTERCEPTOR } from &#x27;@nestjs/core&#x27;;
+import { HttpExceptionFilter } from &#x27;./exceptions/http-exception.filter&#x27;;
+import { LogginInterceptor } from &#x27;./interceptors/loggin.interceptor&#x27;;
+import { ConfigModule } from &#x27;@nestjs/config&#x27;;
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig),
     AuthModule,
     TasksModule,
+    ConfigModule.forRoot({
+      envFilePath: &#x27;.env&#x27;,
+    })
   ],
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LogginInterceptor,
+    },
+  ]
 })
 export class AppModule {}
 </code></pre>
