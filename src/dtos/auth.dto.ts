@@ -6,9 +6,9 @@ export class AuthDto {
     @IsEmail()
     email: string;
 
+    @ApiProperty()
     @IsString()
     @MinLength(6)
     @Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {message: 'Password too weak'})
-    @ApiProperty()
     password: string;
 }
